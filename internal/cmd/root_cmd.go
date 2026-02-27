@@ -23,6 +23,7 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/osac-project/fulfillment-cli/internal/cmd/annotate"
+	"github.com/osac-project/fulfillment-cli/internal/cmd/console"
 	"github.com/osac-project/fulfillment-cli/internal/cmd/create"
 	"github.com/osac-project/fulfillment-cli/internal/cmd/delete"
 	"github.com/osac-project/fulfillment-cli/internal/cmd/describe"
@@ -51,6 +52,7 @@ func Root() *cobra.Command {
 
 	// Add commands:
 	result.AddCommand(annotate.Cmd())
+	result.AddCommand(console.Cmd())
 	result.AddCommand(create.Cmd())
 	result.AddCommand(delete.Cmd())
 	result.AddCommand(describe.Cmd())
